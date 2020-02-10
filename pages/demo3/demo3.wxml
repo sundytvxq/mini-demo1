@@ -1,0 +1,20 @@
+
+<!-- 1.小程序的数据绑定 {{}} mustache语法 -->
+
+
+<view>知识点3</view>
+<view>hello {{name}}</view>
+
+
+<!-- 2.列表渲染  wx
+:for 必须是mustash语法 默认是 item和 index
+-->
+<block>
+<view wx:for="{{arr}}" >{{item.name}}</view>
+</block>
+
+<!-- 3.事件监听 -->
+<view>当前计数：{{count}}</view>
+<button size="mini" bindtap="handelClick">点击+</button>
+
+

@@ -1,11 +1,24 @@
-// pages/page1/page1.js
+// pages/demo3/demo3.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    name:"sundy",
+    arr:[{name:"xiaoming"},{name:"xiaoli"},{name:"xiaoqiang"}],
+    count:0
+  },
+  handelClick(){
+    console.log(111);
+    ++this.data.count
+    // 这种方法count也变化了，但是界面不变，小程序和vue不一样 ，界面没办法监听 vue有defineprototype
+    // 也就是必须要经过setData方法才能驱动视图
+    // this.setData({
+    //   count:++this.data.count
+    //   // ？为什么不能是++
+    // })
+    console.log(this.data.count)
   },
 
   /**
